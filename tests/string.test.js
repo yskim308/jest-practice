@@ -1,7 +1,6 @@
-import {capitalize} from '../main.js'
+import {capitalize, reverse} from '../main.js'
 
 describe('testing capitalize', ()=>{
-
     describe('all lowercase string "david"', ()=>{
         it('should be "David"', ()=>{
             expect(capitalize('david')).toBe('David');
@@ -20,3 +19,11 @@ describe('testing capitalize', ()=>{
         });
     });
 });
+
+describe('testing reverse', ()=>{
+    describe('reverse regular string "bottle"', ()=>{
+        it('should be elttob', ()=>{
+            expect(reverse('bottle')).toBe('elttob');
+        })
+    }) 
+})
