@@ -40,3 +40,16 @@ export function cipher(string, shift){
     }
     return result;
 }
+
+export function analyzeArray(array){
+    let length = array.length;
+    let min = Math.min(...array);
+    let max = Math.max(...array);
+    let average = array.reduce((sum, num)=> sum + num, 0) / length;
+    return {
+        length: length,
+        min: min,
+        max: max,
+        average: average
+    };
+}
