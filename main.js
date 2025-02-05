@@ -19,3 +19,22 @@ export class Calculator{
     divide(a, b) {return a / b};
     multiply(a, b) {return a * b};
 }
+
+
+export function cipher(string, shift){
+    if (!string) { return '' };
+    if (!shift) { return string };
+    let result = '';
+    for (let i = 0; i < string.length; i++){
+        let char = string[i];
+        charCode = char.codePointAt(0);
+        if (charCode >= 65 && charCode <= 90){
+            char = String.fromCodePoint( (charCode + shift - 65) % 26 + 65 );
+        }
+        else if (charCode >= 97 && charCOde <= 122){
+            char = String.fromCodePoint( (charCode + shift - 65) % 26 + 65 );
+        }
+        result += char;
+    }
+    return result;
+}
