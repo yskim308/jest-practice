@@ -27,13 +27,15 @@ export function cipher(string, shift){
     let result = '';
     for (let i = 0; i < string.length; i++){
         let char = string[i];
-        charCode = char.codePointAt(0);
+        let charCode = char.codePointAt(0);
+
         if (charCode >= 65 && charCode <= 90){
             char = String.fromCodePoint( (charCode + shift - 65) % 26 + 65 );
         }
-        else if (charCode >= 97 && charCOde <= 122){
-            char = String.fromCodePoint( (charCode + shift - 65) % 26 + 65 );
+        else if (charCode >= 97 && charCode <= 122){
+            char = String.fromCodePoint( (charCode + shift - 97) % 26 + 97 );
         }
+
         result += char;
     }
     return result;

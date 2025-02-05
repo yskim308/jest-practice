@@ -1,15 +1,15 @@
 import { cipher } from "../main";
 
 describe('testing cipher', ()=>{
-    describe('checking "hello, world" with 3', ()=>{
+    describe('checking "hello, world" with 7', ()=>{
         it('should be "olssv, dvysk!"', ()=>{
-            expect( cipher('hello world!', 3) ).toBe('olssv, dvysk!');
+            expect( cipher('hello, world!', 7) ).toBe('olssv, dvysk!');
         });
     });
 
     describe('checking wrap with "xyz" with 3', ()=>{
         it('should be "abc"', ()=>{
-            expect( cipher('xys', 3) ).toBe('abc');
+            expect( cipher('xyz', 3) ).toBe('abc');
         });
     });
 
